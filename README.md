@@ -3,6 +3,8 @@
 ```
 git clone https://github.com/Yaoxianzhuang/docker-compose-lnmp.git
 
+cd docker-compose-lnmp
+
 docker-compose up -d
 ```
 
