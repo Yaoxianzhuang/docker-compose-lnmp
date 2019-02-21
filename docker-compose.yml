@@ -23,7 +23,7 @@ services:
       - ./www:/var/www/html
       - ./nginx/log:/var/log/nginx
     ports:
-      - "8000:80"
+      - "80:80"
     depends_on:
       - php-fpm
 
@@ -51,6 +51,15 @@ services:
     links:
       - mysql:db
 
+  mongo:
+    image: mongo:latest
+    hostname: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
 volumes:
   mysql-data:
   redis-data:
+  mongo-data:
